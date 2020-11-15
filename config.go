@@ -9,6 +9,7 @@ type Config struct {
 	PingPeriod        time.Duration // Milliseconds between pings.
 	MaxMessageSize    int64         // Maximum size in bytes of a message.
 	MessageBufferSize int           // The max amount of messages that can be in a sessions buffer before it starts dropping them.
+	EnableCompression bool
 }
 
 func newConfig() *Config {

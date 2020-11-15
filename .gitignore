@@ -3,3 +3,6 @@ benchmark
 *.swp
 coverage.out
 Makefile
+
+# IDE
+.idea/
