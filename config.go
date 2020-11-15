@@ -10,6 +10,7 @@ type Config struct {
 	MaxMessageSize    int64         // Maximum size in bytes of a message.
 	MessageBufferSize int           // The max amount of messages that can be in a sessions buffer before it starts dropping them.
 	EnableCompression bool
+	CompressionLevel  int
 }
 
 func newConfig() *Config {

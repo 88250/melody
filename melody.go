@@ -169,6 +169,7 @@ func (m *Melody) HandleRequestWithKeys(w http.ResponseWriter, r *http.Request, k
 
 	m.Upgrader.EnableCompression = m.Config.EnableCompression
 	conn, err := m.Upgrader.Upgrade(w, r, w.Header())
+	conn.SetCompressionLevel(m.Config.CompressionLevel)
 
 	if err != nil {
 		return err
